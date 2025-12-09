@@ -1,0 +1,597 @@
+WEBVTT
+
+1
+00:00:10.466 --> 00:00:13.333
+¿Cómo están estimados estudiantes?
+
+2
+00:00:13.466 --> 00:00:14.966
+En esta semana,
+
+3
+00:00:15.733 --> 00:00:18.366
+veremos la generación de objetos de visualización
+
+4
+00:00:19.466 --> 00:00:22.933
+en Python, que son muy útiles para entender cómo se comportan los datos,
+
+5
+00:00:23.266 --> 00:00:25.133
+cómo están configurados nuestros datos,
+
+6
+00:00:25.166 --> 00:00:27.400
+cómo vamos avanzando en nuestro modelo
+
+7
+00:00:27.533 --> 00:00:30.066
+y, después, cómo están configurado nuestros resultados.
+
+8
+00:00:31.633 --> 00:00:35.266
+Veremos la generación de un histograma
+
+9
+00:00:36.900 --> 00:00:40.266
+y, luego, veremos la creación de un
+
+10
+00:00:41.366 --> 00:00:44.833
+gráfico de pie o de torta.
+
+11
+00:00:45.466 --> 00:00:46.633
+Para el primer ejercicio,
+
+12
+00:00:46.633 --> 00:00:50.733
+tenemos que usar la librería numpy matplotlib de pyplot
+
+13
+00:00:51.900 --> 00:00:54.266
+y vamos a generar una lista con
+
+14
+00:00:56.000 --> 00:00:58.366
+números aleatorios
+
+15
+00:00:58.500 --> 00:01:02.700
+con una distribución normal, que tienen una media
+
+16
+00:01:03.566 --> 00:01:05.766
+0 y desviación estándar 1.
+
+17
+00:01:05.900 --> 00:01:10.200
+Generaremos 1000 elementos que asignaremos dentro de la variable data.
+
+18
+00:01:10.700 --> 00:01:12.900
+No se compliquen con esto,
+
+19
+00:01:13.066 --> 00:01:15.500
+son códigos que se van aprendiendo a medida que se vayan
+
+20
+00:01:15.966 --> 00:01:18.200
+familiarizando más con Python,
+
+21
+00:01:18.333 --> 00:01:23.433
+van a generar estos códigos y los van a entender más fácilmente.
+
+22
+00:01:24.733 --> 00:01:27.800
+Cargamos la librería
+
+23
+00:01:28.533 --> 00:01:30.533
+y generamos
+
+24
+00:01:30.800 --> 00:01:32.400
+nuestra variable
+
+25
+00:01:32.933 --> 00:01:35.533
+con los datos.
+
+26
+00:01:36.000 --> 00:01:36.966
+Aquí la podemos observar,
+
+27
+00:01:36.966 --> 00:01:39.833
+en el explorador de variables, vemos que se generó nuestra variable.
+
+28
+00:01:41.000 --> 00:01:44.533
+Podemos jugar un poquito con ella, para ver cómo se están generando,
+
+29
+00:01:44.666 --> 00:01:45.433
+qué datos tiene;
+
+30
+00:01:45.466 --> 00:01:46.900
+vamos a sacar el mínimo,
+
+31
+00:01:46.933 --> 00:01:48.866
+tener el mínimo en la lista, el mínimo de los mil
+
+32
+00:01:48.966 --> 00:01:53.666
+que contiene la variable data, nos dice que es el -3, aproximadamente;
+
+33
+00:01:54.200 --> 00:01:57.366
+el máximo, que es 2,9;
+
+34
+00:01:58.466 --> 00:02:01.133
+la media, debería estar muy próxima a 0,
+
+35
+00:02:01.366 --> 00:02:06.266
+dado que le indicamos que fuera uno con media 0, y está en 0,03;
+
+36
+00:02:08.333 --> 00:02:14.166
+y la desviación estándar debe estar próxima a 1, que nos da casi uno,
+
+37
+00:02:14.700 --> 00:02:19.366
+0,988 y, otro dato que podemos obtener,
+
+38
+00:02:20.000 --> 00:02:22.400
+es el largo, cuántos elementos tiene esta lista,
+
+39
+00:02:23.066 --> 00:02:25.700
+y tiene 1000 elementos, que fue lo que le indicamos.
+
+40
+00:02:27.866 --> 00:02:28.666
+Con esta instrucción
+
+41
+00:02:28.766 --> 00:02:30.866
+creamos el objeto, creamos el histograma,
+
+42
+00:02:31.100 --> 00:02:35.900
+le decimos que utilice la variable data, con los 1000 elementos que tiene,
+
+43
+00:02:36.266 --> 00:02:40.333
+y que utilice 30 bins o 30 barras que tenga el histograma.
+
+44
+00:02:41.166 --> 00:02:45.700
+Le asignamos un nombre al eje X, un nombre el eje Y y un título,
+
+45
+00:02:45.833 --> 00:02:46.933
+también, al histograma.
+
+46
+00:02:47.066 --> 00:02:50.300
+Vamos a ver cómo se genera, ahí está,
+
+47
+00:02:50.433 --> 00:02:52.666
+lo vemos en los gráficos.
+
+48
+00:02:52.800 --> 00:02:54.500
+Aquí está nuestro histograma.
+
+49
+00:02:54.633 --> 00:02:56.933
+Podemos sacar las primeras conclusiones de esto:
+
+50
+00:02:58.033 --> 00:03:01.633
+es una distribución similar a la normal,
+
+51
+00:03:02.100 --> 00:03:02.866
+donde los valores
+
+52
+00:03:03.000 --> 00:03:06.566
+próximos a la media, próximos a 0, tienen las frecuencias más altas.
+
+53
+00:03:07.033 --> 00:03:10.633
+Aquí el 0 y el 0,1 podría ser o 0,2
+
+54
+00:03:10.766 --> 00:03:14.633
+tienen la frecuencia más alta, que son 85 y 86
+
+55
+00:03:14.866 --> 00:03:18.300
+aproximadamente y, en las puntas, que tienen
+
+56
+00:03:18.633 --> 00:03:22.300
+los valores -3 y 3, tienen las frecuencias más bajas,
+
+57
+00:03:22.466 --> 00:03:24.533
+que es lo esperable, dado que una distribución normal.
+
+58
+00:03:26.000 --> 00:03:26.900
+De las
+
+59
+00:03:26.900 --> 00:03:27.666
+frecuencias mayores,
+
+60
+00:03:27.666 --> 00:03:31.533
+los datos más comunes están próximos al valor 0,
+
+61
+00:03:33.000 --> 00:03:36.433
+estas son las conclusiones que podemos sacar de eso.
+
+62
+00:03:36.833 --> 00:03:40.466
+Y, luego, para nuestro gráfico de pie, utilizamos
+
+63
+00:03:41.866 --> 00:03:44.600
+la misma librería que es matplotlib.pyplot.
+
+64
+00:03:45.566 --> 00:03:46.933
+Vamos a importar
+
+65
+00:03:47.066 --> 00:03:49.600
+una librería que es random, para generar números aleatorios
+
+66
+00:03:50.200 --> 00:03:53.500
+y vamos a asignarle todos estos
+
+67
+00:03:53.633 --> 00:03:57.733
+números aleatorios a la variable lista.
+
+68
+00:03:57.933 --> 00:03:58.300
+Este es un
+
+69
+00:03:58.300 --> 00:04:01.666
+código un poquito difícil de entender al inicio, pero entiéndalo como
+
+70
+00:04:02.833 --> 00:04:06.300
+un conjunto de números, van a ser 25 números, que estén
+
+71
+00:04:07.333 --> 00:04:10.166
+aleatoriamente con distribución uniforme entre 20
+
+72
+00:04:10.300 --> 00:04:14.566
+y 30, 30 números entre 30 y 40, 15
+
+73
+00:04:15.200 --> 00:04:18.966
+entre 40 y 50, y 20 entre 50 y 60.
+
+74
+00:04:20.566 --> 00:04:24.200
+Y podemos importarla y generar la variable,
+
+75
+00:04:25.800 --> 00:04:30.433
+con los 90 elementos que tiene.
+
+76
+00:04:30.866 --> 00:04:33.466
+Veamos que está acá en Explorador de variables
+
+77
+00:04:33.600 --> 00:04:36.333
+y, aquí nos apareció la "variable lista" ¿Se fijan?
+
+78
+00:04:38.100 --> 00:04:39.000
+&nbsp;
+
+79
+00:04:39.133 --> 00:04:46.166
+El primer número es 24,6, el otro 20,7 y el tercero son 20,5 años.
+
+80
+00:04:46.433 --> 00:04:48.100
+Podemos verla acá
+
+81
+00:04:49.033 --> 00:04:50.433
+y vemos los mismos números que están acá.
+
+82
+00:04:50.566 --> 00:04:51.766
+Es un poco
+
+83
+00:04:51.900 --> 00:04:53.366
+engorroso, difícil de entenderlo,
+
+84
+00:04:53.400 --> 00:04:56.266
+dado la cantidad decimales, pero lo podemos aproximar.
+
+85
+00:04:56.900 --> 00:04:58.266
+Juguemos con Python,
+
+86
+00:04:58.266 --> 00:05:00.866
+aprovechemos la facilidad que nos da para manejar estos números.
+
+87
+00:05:01.533 --> 00:05:04.666
+Le decimos que a cada número que está en la lista
+
+88
+00:05:05.666 --> 00:05:08.233
+lo redondée con 0 decimal,
+
+89
+00:05:12.033 --> 00:05:12.633
+y la ejecutó.
+
+90
+00:05:12.633 --> 00:05:17.366
+Ahí generó la nueva variable, la lista nueva y, luego, vemos
+
+91
+00:05:19.066 --> 00:05:19.733
+qué tiene.
+
+92
+00:05:19.866 --> 00:05:21.100
+Ahí está mucho mejor de entenderse ¿Se fijan?
+
+93
+00:05:21.133 --> 00:05:25.866
+Son los mismos números, pero están aproximados a 0 decimal.
+
+94
+00:05:26.200 --> 00:05:30.700
+A pesar de que nos muestra 1 decimal, pero tiene 0 decimal.
+
+95
+00:05:30.833 --> 00:05:31.533
+Luego,
+
+96
+00:05:32.066 --> 00:05:34.333
+para generar el gráfico de torta, estos elementos,
+
+97
+00:05:34.466 --> 00:05:36.766
+tenemos que ver cuántos hay por categoría.
+
+98
+00:05:36.900 --> 00:05:39.800
+No podemos mostrarlos todos en
+
+99
+00:05:40.800 --> 00:05:41.233
+los mismos
+
+100
+00:05:41.233 --> 00:05:42.066
+gráficos.
+
+101
+00:05:43.500 --> 00:05:45.600
+Así como ocurrió con el gráfico de
+
+102
+00:05:46.266 --> 00:05:48.166
+con el histograma, que hay frecuencias,
+
+103
+00:05:48.166 --> 00:05:49.900
+aquí vamos a ver cuántas veces
+
+104
+00:05:49.933 --> 00:05:55.133
+ocurre la edad dentro de cierto rango, por ejemplo: entre 20 y 30,
+
+105
+00:05:55.266 --> 00:05:58.766
+entre 30 y 40, 40 y 50 y 50 y 60.
+
+106
+00:06:00.200 --> 00:06:03.433
+Inicializamos nuestra variable frecuencias,
+
+107
+00:06:03.566 --> 00:06:04.033
+que va a tener
+
+108
+00:06:04.033 --> 00:06:06.466
+sólo 4 valores y cada una de estas posiciones
+
+109
+00:06:06.600 --> 00:06:09.900
+va a tener las veces que está la edad en ese rango.
+
+110
+00:06:10.033 --> 00:06:10.466
+Por ejemplo,
+
+111
+00:06:10.466 --> 00:06:14.966
+en la posición 0 vamos a ver cuántas edades hay entre 20 y 30,
+
+112
+00:06:15.366 --> 00:06:19.533
+la posición 1 vamos a ver cuántos están entre 30 y 40
+
+113
+00:06:19.666 --> 00:06:22.366
+y, así, hasta que llegamos a la 4ª posición,
+
+114
+00:06:22.500 --> 00:06:27.433
+vamos a ver cuántos están entre 50 y 60.
+
+115
+00:06:29.266 --> 00:06:33.200
+Vamos a generar la variable.
+
+116
+00:06:33.333 --> 00:06:36.500
+Aquí nos apareció arriba, frecuencias ¿Se fijan? Después de tener
+
+117
+00:06:38.066 --> 00:06:39.233
+todas esas edades,
+
+118
+00:06:39.233 --> 00:06:40.666
+pasamos a tener frecuencias.
+
+119
+00:06:40.666 --> 00:06:46.400
+Significa aquí que tenemos 24 edades entre 20 y 30, 17 entre 40 y 50
+
+120
+00:06:46.666 --> 00:06:51.000
+y tenemos 19 edades entre 50 y 60 años, que son las que veíamos antes
+
+121
+00:06:51.133 --> 00:06:54.466
+acá en esta variable lista_nueva.
+
+122
+00:06:54.600 --> 00:06:57.200
+Luego, generamos nuestro gráfico de torta,
+
+123
+00:06:57.766 --> 00:06:59.733
+o gráfico de pie,
+
+124
+00:06:59.833 --> 00:07:02.066
+le decimos que utilice la variable frecuencia,
+
+125
+00:07:02.200 --> 00:07:05.566
+que utilice las edades en los rótulos, que utilice
+
+126
+00:07:06.233 --> 00:07:10.533
+las edades, que fue lo que creamos acá, los rangos de las edades
+
+127
+00:07:10.900 --> 00:07:12.533
+y, le indicamos que sean porcentajes,
+
+128
+00:07:12.533 --> 00:07:13.666
+que no baje los números,
+
+129
+00:07:13.666 --> 00:07:14.166
+que nos de los
+
+130
+00:07:14.300 --> 00:07:16.433
+porcentajes, para hacer comparaciones entre cada uno,
+
+131
+00:07:16.500 --> 00:07:18.700
+es más fácil analizarlo así.
+
+132
+00:07:18.833 --> 00:07:23.033
+Y vamos a crearlo, vamos a ver qué nos resultó.
+
+133
+00:07:23.900 --> 00:07:27.033
+Aquí tenemos: este es nuestro gráfico
+
+134
+00:07:28.533 --> 00:07:29.966
+de torta o gráfico de pie.
+
+135
+00:07:30.100 --> 00:07:33.700
+Podemos sacar las primeras conclusiones que:
+
+136
+00:07:33.833 --> 00:07:36.400
+la frecuencia mayor, las edades que más se repiten,
+
+137
+00:07:36.533 --> 00:07:37.800
+que son las que están entre
+
+138
+00:07:37.800 --> 00:07:41.700
+30 y 40 años, están en un 32,6% y, las que menos se repiten,
+
+139
+00:07:42.433 --> 00:07:48.233
+que son las de 40 y 50, están entre 19,1% de los casos,
+
+140
+00:07:48.900 --> 00:07:54.366
+y lo otro es 21,3% en 50 y 60 y 27% de los casos están entre 20 y 30.
+
+141
+00:07:55.633 --> 00:07:59.600
+Eso podemos obtener de esto. Es un gráfico muy sencillo.
+
+142
+00:07:59.733 --> 00:08:01.666
+No se compliquen con el código,
+
+143
+00:08:01.800 --> 00:08:03.400
+a medida que ustedes programen
+
+144
+00:08:03.533 --> 00:08:05.600
+y vayan jugando con esto, van a ir aprendiendo.
+
+145
+00:08:05.733 --> 00:08:09.133
+Pueden ir consultando bastantes sitios, donde consultar los códigos.
+
+146
+00:08:09.833 --> 00:08:12.133
+Y no hay una única forma de hacer
+
+147
+00:08:12.300 --> 00:08:14.333
+los gráficos, los programas, así que
+
+148
+00:08:14.466 --> 00:08:15.933
+mucho ánimo y esto es muy entretenido.
+
+149
+00:08:15.933 --> 00:08:25.333
+Así que ánimos jóvenes, nos vemos ¡Suerte!
